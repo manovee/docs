@@ -58,7 +58,36 @@
           "icon": "newspaper"
         }
       ]
-    }
+    },
+    "groups": [
+      {
+        "group": "Start Here",
+        "pages": [
+          "index",
+          "kb/get-started",
+          "kb/free-ai-visibility-check"
+        ]
+      },
+      {
+        "group": "Workspace",
+        "pages": [
+          "kb/dashboard",
+          "kb/prompts",
+          "kb/ai-tests-and-results",
+          "kb/source-domains",
+          "kb/competitors",
+          "kb/products",
+          "kb/settings-team-connections"
+        ]
+      },
+      {
+        "group": "Support",
+        "pages": [
+          "kb/troubleshooting",
+          "kb/glossary"
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
