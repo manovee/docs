@@ -1,0 +1,66 @@
+# Use the Admin console
+
+The Admin console is for platform admins and superadmins. Regular workspace members will not see this section.
+
+
+## Use cases
+
+- Review platform activity.
+- Manage users and plans.
+- Approve or reject early access requests.
+- Review leads from public flows.
+- Configure AI functions.
+- Manage AI providers and models.
+- Monitor AI usage and errors.
+- Manage subscription plans.
+
+## Open Admin
+
+1. Sign in as a superadmin.
+2. Select **Admin** in the sidebar.
+3. Choose a section from the Admin sidebar.
+
+## Overview
+
+Overview shows total users, pending requests, active subscriptions, available plans, plan distribution, and recent activity.
+
+## Users
+
+
+Use **Users** to search users, inspect role and plan status, and assign plans.
+
+## Early Access and Leads
+
+
+Use **Early Access** for approval workflows and **Leads** to review captured leads from public flows.
+
+## AI Configuration
+
+
+Use **Configuration** to manage which AI provider and model powers each AI function. Only change these settings if you understand the effect on costs, quality, and reliability.
+
+Common functions include prompt suggestions, AI search, sentiment analysis, product analysis, competitor generation, optimization plans, and search ranking support.
+
+## Providers and Models
+
+
+Use **Providers & Models** to manage model metadata, provider assignment, enabled status, token limits, context windows, and cost values. Disabled models should not be used for new configured runs.
+
+## Usage Analytics
+
+
+Use **Usage Analytics** to inspect AI call volume, provider mix, function usage, slow calls, and recent errors. This is the main support screen for understanding whether AI workflows are running successfully.
+
+## Plan Management
+
+
+Use **Plan Management** to create or update plan limits and pricing. Plan settings affect prompt limits and available workspace capacity.
+
+## Behind the scenes
+
+- Frontend route: `/app/admin` with `section` query parameters.
+- Frontend screens: `AdminPage`, `AIConfigurationPage`, `AIProvidersPage`, `AIUsageDashboard`, `PlanManagementPage`, and `LeadsPage`.
+- Backend tables: `profiles`, `user_roles`, `pending_users`, `subscription_plans`, `ai_configurations`, `ai_configuration_versions`, `ai_providers_models`, and `ai_call_logs`.
+- Backend RPCs: `has_role`, `get_all_users_with_plans`, and `assign_user_plan`.
+- Admin-only pages are protected by `SuperAdminRoute`.
+
