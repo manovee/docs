@@ -13,7 +13,7 @@ The free AI visibility check lets a visitor test how visible a brand is in AI-ge
 
 ## Start a check
 
-1. Open `/free-ai-visibility-check`.
+1. Open the free AI visibility check page.
 2. Enter the company website.
 3. Select the button to start the check.
 4. Tamlr detects the brand and generates suggested prompts.
@@ -46,13 +46,12 @@ Use the download option when available. Tamlr renders a report view and exports 
 
 If you sign up from a free report flow, Tamlr can carry selected prompt context into your account so you do not have to start from scratch.
 
-## Behind the scenes
+## What happens after you submit
 
-- Frontend route: `/free-ai-visibility-check`.
-- Frontend screen: `FreeVisibilityCheck`.
-- Backend Edge Function: `public-visibility-check`.
-- Backend actions: `detect`, `analyze`, `capture-email`, and `count`.
-- Data: free reports are stored in `public_reports`; workspace conversion can link a report to the new user.
-- AI execution: brand detection and prompt generation route through the central AI execution layer. The analysis step queries multiple AI providers and stores visibility, sentiment, citation, and scoring data on the report.
-- Rate limits and caching protect the public endpoint and reduce duplicate runs for the same domain.
+- Tamlr reads the website to identify the brand and useful company context.
+- Tamlr suggests buyer-style prompts that can reveal whether the brand appears in AI answers.
+- The selected prompts are checked across the available free-check models.
+- The report summarizes visibility, mentions, sentiment, citations, and source patterns.
+- If the same website was checked recently, Tamlr may reuse the recent report to avoid duplicate runs.
 
+If you create a workspace from the report, Tamlr can carry over useful prompt context so your team has a faster starting point.

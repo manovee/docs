@@ -47,13 +47,12 @@ To populate the dashboard:
 3. Wait for responses and sentiment analysis to finish.
 4. Return to the dashboard.
 
-## Behind the scenes
+## How Tamlr calculates this view
 
-- Frontend route: `/app`.
-- Frontend screen: `AtlasDashboard`.
-- Backend data: `ai_interactions`, `prompts`, `competitors`, and `search_rankings`.
-- The dashboard reads recent workspace data, generally bounded to the latest 30 days and limited query sizes for performance.
-- Visibility is calculated from response metadata such as `company_mentioned`.
-- Citations are counted from response metadata.
-- Sentiment uses stored sentiment scores from AI response analysis.
+- Visibility is based on completed AI test responses for the selected company.
+- A mention counts when Tamlr finds the company in an AI answer.
+- Citations come from source links found in AI answers.
+- Sentiment comes from Tamlr's analysis of the answer tone.
+- Ranking charts use completed Google ranking checks connected to prompts.
 
+The dashboard focuses on recent workspace activity. Run fresh AI tests when you need the numbers to reflect current market visibility.

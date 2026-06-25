@@ -69,12 +69,11 @@ Always test a connection before saving it. Saved connections are used when publi
 
 Use **Help Center** for support and guidance. If a workflow is blocked, include the workspace, page, prompt, and approximate time when contacting support.
 
-## Behind the scenes
+## Permissions and connection safety
 
-- Frontend route: `/app/settings`.
-- Frontend screens: `SettingsPage`, `TeamMembersSection`, and `ConnectionsSection`.
-- Backend tables: `companies`, `profiles`, `company_memberships`, `company_invites`, and CMS connection tables.
-- Backend RPCs: `get_my_company_role`, `get_company_members`, `remove_company_member`, and `set_company_member_role`.
-- Backend CMS function: `publish-to-cms` supports connection testing, saving, deletion, provider lookup, and publishing.
-- CMS credentials are handled through backend workflows, not exposed as normal workspace content.
+- Only users with the right workspace role can invite members, remove members, or change roles.
+- Company details affect prompts, source classification, products, and location-aware checks.
+- CMS credentials should be created for publishing only and rotated if a team member loses access.
+- Always test a CMS connection before relying on it for publishing.
 
+If a teammate cannot access a setting, confirm their workspace role before troubleshooting further.

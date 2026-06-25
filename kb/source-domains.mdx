@@ -38,12 +38,11 @@ Turn on **Gap Analysis** to focus on source opportunities. A gap usually means a
 
 Use URL view when you need specific pages rather than domains. URL types can include homepages, category pages, product pages, articles, profiles, discussions, guides, listicles, and other page types.
 
-## Behind the scenes
+## How Tamlr builds this view
 
-- Frontend route: `/app/sources`.
-- Frontend screen: `SourceDomainsPage`.
-- Backend data: `ai_interactions` response metadata and active `competitors`.
-- Source domains are extracted from citations stored on AI response metadata.
-- Classification uses company website, competitor websites, and known domain patterns.
-- The source view reads recent AI interaction data, generally within a bounded 30-day window.
+- Tamlr looks at source links found in completed AI test responses.
+- Your company website is marked separately from competitor websites and other source types.
+- Domains are grouped so you can quickly separate owned sources, competitors, editorial sites, communities, directories, and other references.
+- Gap analysis highlights sources that may influence AI answers but do not clearly include your brand.
 
+Run fresh AI tests when you want Source Domains to reflect new content, new competitors, or recent market changes.

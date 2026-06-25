@@ -44,14 +44,13 @@ Open an individual AI response when you need to inspect the full answer, source 
 
 When available, optimization actions help translate weak visibility into content or source-improvement work. Use these actions as guidance for what to publish, update, or promote.
 
-## Behind the scenes
+## What Tamlr saves from a test
 
-- Frontend routes: `/app/search/prompt/:id`, `/app/search/response/:id`, and `/app/search/prompt/:id/optimize`.
-- Frontend screens: `PromptDetailPage`, `AIResponseDetailPage`, and `OptimizationPlanPage`.
-- Backend AI functions: `ai-search-openai`, `ai-search-claude`, `ai-search-gemini`, `ai-search-perplexity`, and `ai-search-google-ai-mode`.
-- Ranking function: `serp-ranking`.
-- Sentiment function: `analyze-sentiment`.
-- Optimization function: `generate-optimization-plan`.
-- Backend tables: `ai_interactions`, `search_rankings`, `prompts`, `competitors`, `competitor_mentions`, and optimization task tables.
-- Responses are stored with metadata including company mentions, competitor mentions, citations, and sentiment.
+- The prompt that was tested.
+- The AI model that answered.
+- The full answer text.
+- Whether your company and tracked competitors were mentioned.
+- Source citations found in the answer.
+- Sentiment and visibility signals used in dashboards and reports.
 
+This saved history lets your team compare results over time instead of relying on one-off AI searches.

@@ -31,7 +31,7 @@ Prompts are the buyer, researcher, or evaluator questions that Tamlr tests acros
 
 ## Add a topic
 
-Use **Add Topic** when you want to group related prompts. Topics make the prompt table easier to scan and help teams separate workflows by product, funnel stage, market, or use case.
+Use **Add Topic** when you want to group related prompts. Topics make the prompt list easier to scan and help teams separate workflows by product, funnel stage, market, or use case.
 
 ## Use suggested prompts
 
@@ -47,12 +47,12 @@ Use the prompt search box to filter by title or text. Use sorting controls to or
 
 The prompt counter shows current usage and the workspace plan limit. If the limit is reached, deactivate unused prompts or ask an admin about plan options.
 
-## Behind the scenes
+## How prompts are used
 
-- Frontend route: `/app/search`.
-- Frontend screen: `PromptsPage`.
-- Backend tables: `prompts` and `prompt_categories`.
-- Suggested prompts use the `suggest-prompts` Edge Function.
-- Prompt limits are plan-aware and come from subscription plan data.
-- Suggested prompt drafts are stored locally per company until accepted, dismissed, or refreshed.
+- Active prompts can be tested against AI models.
+- Prompt topics make long lists easier to manage.
+- Suggested prompts are based on company context such as name, website, industry, and location.
+- Prompt limits depend on the workspace plan.
+- Deactivated prompts stop new monitoring while keeping past results available.
 
+Review prompts regularly so your workspace keeps tracking the questions customers actually ask.

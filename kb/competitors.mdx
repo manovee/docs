@@ -19,7 +19,7 @@ Competitors helps you monitor brands that appear in AI answers alongside or inst
 
 ## Suggested brands
 
-Suggested brands are extracted from AI response metadata when possible. If Tamlr does not find enough competitor mentions in stored responses, it can generate suggestions from company context.
+Suggested brands come from names Tamlr finds in AI answers when possible. If there is not enough response history yet, Tamlr can suggest likely competitors from company context.
 
 Each suggested brand can be:
 
@@ -28,17 +28,17 @@ Each suggested brand can be:
 
 ## Refresh from AI responses
 
-Use **Refresh from AI Responses** after running more prompts. Tamlr scans recent response metadata and updates suggestions based on brands mentioned in those answers.
+Use **Refresh from AI Responses** after running more prompts. Tamlr scans recent answers and updates suggestions based on brands mentioned in those answers.
 
 ## Tracked competitors
 
 Tracked competitors help other areas of the app classify source domains and compare visibility. Keeping this list clean improves dashboard comparisons and gap analysis.
 
-## Behind the scenes
+## How competitors affect the workspace
 
-- Frontend route: `/app/competitors`.
-- Frontend screen: `CompetitorsPage`.
-- Backend tables: `competitors`, `ai_interactions`, and `competitor_mentions`.
-- Backend functions: `generate-competitors` and `scan-competitor-mentions`.
-- Competitor suggestions can come from stored response metadata or from AI generation when no response-derived suggestions are available.
+- Dashboard comparisons use your tracked competitor list.
+- Source Domains uses competitor websites to classify cited sources.
+- Prompt results can show when competitors appear instead of your company.
+- Suggested competitors improve as you run more realistic buyer prompts.
 
+Keep the tracked list focused on brands your team actually cares about. Too many unrelated competitors can make comparisons harder to read.

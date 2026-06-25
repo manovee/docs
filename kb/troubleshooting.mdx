@@ -7,11 +7,11 @@ Use this guide when something in Tamlr does not behave as expected.
 Try these steps:
 
 1. Confirm you are using the correct email.
-2. Use password reset from `/reset-password`.
+2. Use the password reset option from the sign-in page.
 3. If using Google sign-in, confirm the same Google email is attached to your account.
 4. Ask an admin to confirm your invite or account status.
 
-Behind the scenes: sign-in uses Supabase Auth. Protected app routes redirect to `/login` when there is no active session.
+If the problem continues, ask an admin to confirm that your account is active and invited to the right workspace.
 
 ## I signed in but cannot see a company
 
@@ -21,7 +21,7 @@ You may not belong to a company yet.
 2. Ask a workspace admin to invite you.
 3. Create a company if your plan allows it.
 
-Behind the scenes: company access is based on membership records and company RPCs.
+If you expected to see an existing workspace, ask a workspace admin to resend the invite or confirm your role.
 
 ## The dashboard has no data
 
@@ -33,7 +33,7 @@ The dashboard needs completed prompt runs.
 4. Wait for responses and sentiment analysis.
 5. Return to **Dashboard**.
 
-Behind the scenes: dashboard metrics come from `ai_interactions`, `search_rankings`, prompt records, and response metadata.
+If the dashboard still looks empty after successful tests, confirm that you are viewing the correct company workspace and date range.
 
 ## Prompt limit reached
 
@@ -53,7 +53,7 @@ Possible causes:
 - The selected model is unavailable.
 - The AI provider rate-limited the request.
 - A search or sentiment provider failed.
-- Required backend secrets are missing.
+- A required platform setting is missing or outdated.
 
 Ask a platform admin to check **Admin > Usage Analytics** and **Admin > Configuration**.
 
@@ -67,7 +67,7 @@ Source Domains depends on citations in stored AI responses.
 
 ## Competitor suggestions look wrong
 
-Competitor suggestions are based on AI response metadata and AI generation fallback.
+Competitor suggestions are based on recent AI answers and company context.
 
 1. Dismiss irrelevant suggestions.
 2. Track important competitors manually.
@@ -96,16 +96,15 @@ Check:
 
 Admin appears only for superadmin accounts. Ask an existing platform admin to confirm your role.
 
-## Behind the scenes
+## What to include when asking for help
 
-The most useful support signals are:
+The most useful support details are:
 
-- Page or route where the problem happened.
+- Page where the problem happened.
 - Company workspace name.
 - Prompt title or product name involved.
 - Time of the attempted action.
 - Any visible error message.
-- Whether the action was a frontend save, AI run, CMS publish, or admin action.
+- Whether the action was a settings change, AI run, CMS publish, or admin action.
 
-Platform admins can cross-check `ai_call_logs`, AI configuration, provider model status, subscription plans, and user roles.
-
+Platform admins can cross-check AI usage, provider settings, subscription plans, and user roles.

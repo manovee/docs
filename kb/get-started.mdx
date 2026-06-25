@@ -12,21 +12,21 @@ Tamlr helps teams understand how visible their brand is in AI answers. You creat
 
 ## Sign in
 
-1. Go to `/login`.
+1. Open the Tamlr sign-in page.
 2. Enter your email and password.
 3. Select **Sign in**.
 4. Use **Continue with Google** if your account is configured for Google sign-in.
 
-If you are already signed in, Tamlr sends you to the main app at `/app`.
+If you are already signed in, Tamlr takes you straight to your workspace.
 
 ## Reset your password
 
 ![Reset password page](./screenshots/reset-password-page.png)
 
-1. Go to `/reset-password` from the login flow.
+1. Select the password reset option from the sign-in flow.
 2. Enter your account email.
 3. Follow the email instructions.
-4. Return to `/login` and sign in with the new password.
+4. Return to Tamlr and sign in with the new password.
 
 ## Create or join a company
 
@@ -53,10 +53,11 @@ After login, the sidebar gives access to:
 - **Settings**: company profile, team, account, appearance, connections, and help.
 - **Admin**: platform administration, visible only to superadmins.
 
-## Behind the scenes
+## What Tamlr remembers
 
-- Frontend routes: `/login`, `/reset-password`, `/onboarding`, and `/app`.
-- Frontend areas: `AuthProvider`, `ProtectedRoute`, `CompanyProvider`, `OnboardingPage`, and `AtlasSidebar`.
-- Backend: Supabase Auth stores sessions. Company membership is loaded through company membership RPCs and the `companies`, `profiles`, and `company_memberships` data model.
-- Company switching calls the `switch_active_company` RPC and stores the selected company locally for a smoother return experience.
+- Your signed-in session, so you do not have to log in again every time.
+- The company workspace you selected most recently.
+- Which companies you can access, based on your team memberships and invites.
+- Each workspace's own prompts, products, competitors, sources, team, and settings.
 
+If something looks missing after sign-in, first check that you selected the right company in the sidebar.

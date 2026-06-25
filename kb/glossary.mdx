@@ -1,94 +1,63 @@
-# Glossary and data model guide
+# Glossary
 
-This glossary explains common Tamlr terms in end-user language, with light backend references for support and admin clarity.
+This glossary explains common Tamlr terms in end-user language.
 
 ## AI Visibility Score
 
 The percent of tested AI responses that mention the selected company.
 
-Backend reference: calculated from `ai_interactions` response metadata.
-
 ## AI Interaction
 
-A stored response from an AI model for a specific prompt.
-
-Backend reference: `ai_interactions`.
+A saved response from an AI model for a specific prompt.
 
 ## Citation
 
 A source URL found in an AI response.
 
-Backend reference: citations are usually stored in response metadata and may also relate to source analysis tables.
-
 ## Company
 
 A workspace that owns prompts, products, competitors, analytics, team members, and settings.
-
-Backend reference: `companies`.
 
 ## Competitor
 
 A brand tracked against the selected company.
 
-Backend reference: `competitors` and `competitor_mentions`.
-
 ## Gap Analysis
 
 A view that helps find sources where AI models cite or discuss a market but do not clearly mention your company.
 
-Backend reference: derived from AI response citations, company website, competitor websites, and mention metadata.
-
 ## Google AI Mode
 
-A search-style AI answer source powered through the configured Google AI Mode workflow. In the current backend, this uses SERP API based infrastructure rather than the direct Google model provider.
-
-Backend reference: `ai-search-google-ai-mode` and `serpapi` logs.
+A search-style AI answer source that Tamlr can use when it is enabled for your workspace.
 
 ## Prompt
 
 A question Tamlr sends to AI models to test visibility.
 
-Backend reference: `prompts`.
-
 ## Prompt Category or Topic
 
 A grouping for related prompts.
-
-Backend reference: `prompt_categories`.
 
 ## Product
 
 A product, service, or offering associated with the company.
 
-Backend reference: `products`.
-
 ## Search Ranking
 
 Google ranking data for keywords connected to a prompt.
-
-Backend reference: `search_rankings` and the `serp-ranking` Edge Function.
 
 ## Sentiment
 
 The tone of an AI response toward the company or competitor.
 
-Backend reference: `analyze-sentiment` stores sentiment scores and supporting metadata.
-
 ## Source Domain
 
 A domain cited by AI responses, such as your own website, a competitor site, an editorial site, or a community site.
-
-Backend reference: extracted from response metadata on `ai_interactions`.
 
 ## Team Role
 
 A role that controls what a member can do inside a company workspace.
 
-Backend reference: company membership records and role RPCs.
-
 ## Platform Admin or Superadmin
 
 A user with access to the Admin console for users, plans, AI configuration, provider models, usage analytics, leads, and early access requests.
-
-Backend reference: `user_roles`, `has_role`, and admin-only RPCs.
-
